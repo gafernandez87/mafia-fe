@@ -1,0 +1,195 @@
+.game {
+  display: flex;
+  border-radius: 2%;
+  align-items: center;
+  flex-flow: wrap column;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  background-image: url('/public/background.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.title { 
+  margin: 0px; 
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.subtitle { 
+  margin: 0px;
+  color: gray;
+  font-size: 14px;
+}
+
+.subtitle b { text-transform: capitalize;}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.adminSelect {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap row;
+  align-self: flex-start;
+  justify-content: space-between;
+}
+.adminSelect label {
+  margin: auto 20px auto 0px;
+}
+.adminSelect select {
+  flex-grow: 1;
+  height: 40px;
+  font-size: 15px;
+}
+
+.cardContainer {
+  width: 470px;
+  height: 170px;
+  padding: 30px;
+  background: white;
+}
+
+.allNumbers {
+  display: flex;
+  justify-content: center;
+}
+.allNumbers td{
+  padding: 5px;
+  text-align: center;
+}
+
+.playerList{
+  width: 100%;
+  max-height: 50%;
+  overflow-x: scroll;
+}
+
+.playerList.day{
+  background: url('/public/day.jpg');
+  background-size: cover;
+}
+
+.playerList.night{
+  background: url('/public/night.jpg');
+  background-size: cover;
+}
+
+.playerList ul {
+  max-height: 500px;
+  padding: 30px;
+  list-style: none;
+}
+
+.player {
+  height: 35px;
+  padding: 5px;
+  display: flex;
+  line-height: 30px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  flex-flow: wrap row;
+  background-color: white;
+  justify-content: space-between;
+  box-shadow: 2px 2px 15px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 15px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 2px 2px 15px -4px rgba(0,0,0,0.75);
+}
+
+.player .job {
+  float: right;
+}
+
+.player .job img {
+  width: 30px;
+}
+
+.player .job .jobImage {
+  margin-right: 15px;
+}
+
+
+.player.selected {
+  background-color: #89ceff;
+}
+
+.player.disabled {
+  background-color: #9c9c9c;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  flex-flow: wrap row;
+}
+
+.coolButton, .smallButton {
+  border: none;
+  color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #27ae60;
+  box-shadow: 0 5px #95a5a6;
+}
+
+.smallButton {
+  margin: 5px;
+  font-size: 15px;
+  padding: 5px 10px;
+}
+
+.smallButton:disabled {
+  background-color: gray;
+}
+
+.smallButton:disabled:hover {
+  background-color: gray;
+}
+
+.coolButton:hover, .smallButton:hover {
+  background-color: #2ecc71;
+}
+
+.coolButton:active, .smallButton:active {
+  background-color: #2ecc71;
+  box-shadow: 0 5px #95a5a6;
+  transform: translateY(4px);
+}
+
+.mafiaButton{
+  background-color: #e83f33;
+}
+
+.mafiaButton:hover {
+  background-color: #da4e44;
+}
+
+.policiaButton {
+  background-color: #4121f1;
+}
+
+.policiaButton:hover{
+  background-color: #2c15a9;
+}
+
+.pass{
+  width: 100%;
+}
+
+.lobbyPlayers{
+  width: 100%;
+  padding: 0px;
+  list-style: none;
+}
+.lobbyPlayers img {
+  width: 25px;
+  height: 25px;
+  margin-top: 4px;
+}

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client'; // Asegúrate de usar 'react-dom/client
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './index.css';
-import Landing from './components/Landing';
-import Game from './components/Game';
+import Landing from './components/Landing/Landing';
+import Main from './components/Main/Main';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,7 +12,7 @@ root.render(
      <Router>
       <Routes>
         <Route path="/" exact element={<Landing />}></Route>
-        <Route path="/game" exact element={<Game />}></Route>
+        <Route path="/game" exact element={<Main />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>

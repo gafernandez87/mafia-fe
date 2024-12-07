@@ -1,0 +1,33 @@
+.footerContainer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: gray;
+    height: 40px;
+    padding: 10px;
+    margin: 0;
+}
+
+.footerContainer li {
+    list-style: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.footerContainer li:hover {
+    background-color: #3e9a05;
+}
+
+.footerContainer li.selected {
+    background-color: #3e9a05;
+}
+
+.footerContainer li img {
+    width: 40px;
+    height: 40px;
+}

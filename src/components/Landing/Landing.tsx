@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from "react-cookie";
 
-import { API_HOST, SESSION_COOKIE } from '../utils/constants';
-import apiCall from "../utils/apiCall";
+import { API_HOST, SESSION_COOKIE } from '../../utils/constants';
+import apiCall from "../../utils/apiCall";
 
 // Styles
 import styles from "./Landing.module.css";
@@ -14,24 +14,29 @@ const Landing: React.FC = () => {
     
     const [name, setName] = useState("");
     const [job, setJob] = useState<string | null>(null);
-    const [_, setCookie] = useCookies([SESSION_COOKIE]);
+    const [cookies, setCookie] = useCookies([SESSION_COOKIE]);
     const navigate = useNavigate();
 
     const joinGame = () => {
         apiCall(`${API_HOST}/api/players`, {
-        // apiCall(`http://localhost:4001/api/players`, {
-        method: "POST",
-        body: JSON.stringify({ name: name }),
-        })
-        .then((player) => {
-            setCookie(SESSION_COOKIE, player.id);
-            navigate(`/game`)
-        })
-        .catch((err) => console.log("Error while creating room", err));
+            method: "POST",
+            body: JSON.stringify({ name: name }),
+            })
+            .then((player) => {
+                setCookie(SESSION_COOKIE, player.id);
+                navigate(`/game`)
+            })
+            .catch((err) => console.log("Error while creating room", err));
     };
 
     useEffect(() => {
         changeJob();
+
+        const sessionId = cookies[SESSION_COOKIE];
+        console.log(sessionId)
+        // if(sessionId) {
+        //     navigate('/game');
+        // }
     }, []);
 
     const changeJob = () => {

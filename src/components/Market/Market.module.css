@@ -1,0 +1,67 @@
+.marketContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 80%;
+    padding: 2rem;
+}
+
+.marketContainer .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.marketContainer .header h2 {
+    margin: 0;
+}
+
+.marketItems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+
+.marketItems li {
+    position: relative;
+    list-style-type: none;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    filter: drop-shadow(2px 4px 4px #1c1c1c);
+    color: black;
+    text-transform: capitalize;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 15px
+}
+
+.marketItems li:hover img {
+    filter: drop-shadow(2px 4px 4px #1c1c1c);
+    transform: scale(1.2);
+    transition: transform 0.5s;
+}
+
+.marketItems li img {
+    width: 50%;
+}
+
+.marketItems .price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

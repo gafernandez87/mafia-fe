@@ -11,7 +11,6 @@ export default function apiCall(url: string, options: any) {
 
 function handleErrors(response: any) {
   if (!response.ok) {
-    console.log(response);
     throw Error(response.statusText);
   }
   return response.json();

@@ -1,0 +1,15 @@
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    min-height: 600px;
+    gap: 20px;
+}
+
+.gameContainer h2 {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
