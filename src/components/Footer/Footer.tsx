@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styles from './Footer.module.css';
 
 const menuItem = ['people', 'backpack', 'market', 'faq'];
@@ -11,7 +10,8 @@ const Footer = ({active, setActive}: any) => {
         <li key={item} className={active === item ? styles.selected : ''} 
           onClick={() => setActive(item)}
         >
-          <img src={`icons/${item}.png`} alt={item}></img>
+          <img src={`icons/${item}.svg`} alt={item} className={item === 'backpack' || item === 'faq' ? styles.midSize : ''}></img>
+          {item}
         </li>
       ))}
     </ul>

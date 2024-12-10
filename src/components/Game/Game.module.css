@@ -13,3 +13,9 @@
     margin-top: 10px;
     margin-bottom: 0;
 }
+
+.body {
+    height: 100%;
+    overflow: scroll;
+    margin-bottom: 70px;
+}

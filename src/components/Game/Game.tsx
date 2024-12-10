@@ -41,25 +41,27 @@ const Game = ({ game, me, onEmit}: any) => {
   
   return (
     <div className={styles.gameContainer}>
-        <h2 className={styles.title}>Dia {game.dayCount}</h2>
-        {currentPage === 'people' && (
-          <>
-            <Player me={me}></Player>
-            <AllPlayers players={game.players} me={me} />
-          </>
-        )}
+        <section className="body">
+          <h2 className={styles.title}>Dia {game.dayCount}</h2>
+          {currentPage === 'people' && (
+            <>
+              <Player me={me}></Player>
+              <AllPlayers players={game.players} me={me} />
+            </>
+          )}
 
-        {currentPage === 'backpack' && (
-          <Backpack backpack={backpack} setCurrentPage={setCurrentPage} />
-        )}
+          {currentPage === 'backpack' && (
+            <Backpack backpack={backpack} setCurrentPage={setCurrentPage} />
+          )}
 
-        {currentPage === 'market' && (
-          <Market market={market} me={me} buyItem={handleBuyItem} />
-        )}
+          {currentPage === 'market' && (
+            <Market market={market} me={me} buyItem={handleBuyItem} />
+          )}
 
-        {currentPage === 'faq' && (
-          <>FAQ</>
-        )}
+          {currentPage === 'faq' && (
+            <>FAQ</>
+          )}
+        </section>
         <Footer active={currentPage} setActive={setCurrentPage} />
     </div>
   );

@@ -7,7 +7,7 @@ const formatMoney = (value: number): string => {
 };
 
 const Player = ({ me }: any) => {
-
+  console.log(me);
   return (
     <div className={styles.playerContainer}>
 

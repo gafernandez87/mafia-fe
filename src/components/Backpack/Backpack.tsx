@@ -12,7 +12,7 @@ const Backpack = ({backpack, setCurrentPage}: any) => {
    <div className={styles.backpackContainer}>
     <ul className={styles.backpackItems}>
       {backpack.map((item: any, index: number) => (
-        <li>
+        <li key={item.name}>
           <img src={`items/${item.name}.png`} />
           <span>{item.name}</span>
         </li>

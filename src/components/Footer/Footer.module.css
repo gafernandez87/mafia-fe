@@ -5,29 +5,49 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: gray;
-    height: 40px;
-    padding: 10px;
+    max-width: 600px;
+    background-color: black;
+    height: 60px;
+    padding: 0px;
     margin: 0;
 }
 
 .footerContainer li {
-    list-style: none;
-    background-color: white;
-    padding: 5px;
-    border-radius: 20%;
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 0px 15px;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-weight: 600;
+    font-size: 14px;
     cursor: pointer;
 }
 
+
 .footerContainer li:hover {
-    background-color: #3e9a05;
+    background-color: black;
+    filter: invert(1);
 }
 
 .footerContainer li.selected {
-    background-color: #3e9a05;
+    background-color: black;
+    filter: invert(1);
 }
 
 .footerContainer li img {
     width: 40px;
     height: 40px;
+}
+
+
+.midSize {
+    width: 30px !important;
+    height: 30px !important;
 }

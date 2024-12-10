@@ -4,11 +4,9 @@
   align-items: center;
   flex-flow: wrap column;
   margin: 0 auto;
-  height: 100vh;
+  height: 100%;
+  max-width: 700px;
   width: 100%;
-  background-image: url('/public/background.webp');
-  background-size: cover;
-  background-position: center;
 }
 
 .title { 
