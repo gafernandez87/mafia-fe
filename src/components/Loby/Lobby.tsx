@@ -1,10 +1,11 @@
 
 // Style
 import styles from "../Main/Main.module.css";
+import lobbyStyles from "./Lobby.module.css";
 
 const Lobby = ({ me, players, adminSelect, initGame }: any) => {
   return (
-    <>
+    <section className={lobbyStyles.lobbycontainer}>
       <h1>Sala de espera</h1>
       <div className={styles.adminSelect}>
         <label>Moderador</label>
@@ -17,9 +18,9 @@ const Lobby = ({ me, players, adminSelect, initGame }: any) => {
       </div>
       <ul className={styles.lobbyPlayers}>
         {players.map((p: any) => (
-          <li key={p.id} className={styles.player}>
+          <li key={p.id} className={[styles.player, lobbyStyles.player].join(' ')}>
             {p.name}
-            {p.isAdmin ? <img src="eye.png" alt="admin" /> : null}
+            {p.isAdmin ? <img src="icons/admin.svg" alt="admin" /> : null}
           </li>
         ))}
       </ul>
@@ -27,9 +28,9 @@ const Lobby = ({ me, players, adminSelect, initGame }: any) => {
       <button
         onClick={initGame}
         style={{ width: '100%' }}
-        className={styles.coolButton}>Empezar</button>
+        className="coolButton">Empezar</button>
       }
-    </>
+    </section>
   )
 }
 

@@ -3,9 +3,9 @@
     align-items: center;
     justify-content: center;
     background-color: rgb(0, 0, 0, 0.5);
-    width: 80%;
-    height: 80%;
-    padding: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
 }
 
 .backpackItems {
@@ -30,4 +30,16 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+
+h4 {
+    color: white;
+    font-size: 30px;
+}
+
+.emptyBackpack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

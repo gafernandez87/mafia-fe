@@ -1,0 +1,18 @@
+.chip {
+  display: flex;
+  justify-content: center;
+  min-width: 60px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #3e9a05;
+  filter: drop-shadow(0 0 3px black);
+}
+
+.default {
+  background-color: white;
+  filter: drop-shadow(0 0 3px black);
+}

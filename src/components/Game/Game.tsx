@@ -41,7 +41,7 @@ const Game = ({ game, me, onEmit}: any) => {
   
   return (
     <div className={styles.gameContainer}>
-        <section className="body">
+        <section className={styles.body}>
           <h2 className={styles.title}>Dia {game.dayCount}</h2>
           {currentPage === 'people' && (
             <>

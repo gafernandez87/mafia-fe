@@ -1,0 +1,23 @@
+
+.lobbycontainer {
+    display: flex;
+    flex-flow: wrap column;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    min-height: 400px;
+    background-color: #ffffffcc;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.player {
+    justify-content: center;
+    position: relative;
+}
+
+.player img {
+    position: absolute;
+    left: 20px;
+}

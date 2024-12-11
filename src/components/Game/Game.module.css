@@ -15,7 +15,7 @@
 }
 
 .body {
-    height: 100%;
-    overflow: scroll;
-    margin-bottom: 70px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
 }
