@@ -30,7 +30,7 @@ const Main: React.FC = () => {
         if(!sessionId) navigate('/');
 
         // socket = socketIOClient();
-        socket = socketIOClient(`${API_HOST}`, {
+        socket = socketIOClient(`${API_HOST}:4001`, {
             withCredentials: true,
             transports: ['websocket']
         });
