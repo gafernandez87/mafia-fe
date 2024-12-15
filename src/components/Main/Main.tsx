@@ -30,7 +30,7 @@ const Main: React.FC = () => {
         if(!sessionId) navigate('/');
 
         // socket = socketIOClient();
-        socket = socketIOClient(`${API_HOST}:4001`, {
+        socket = socketIOClient(`${API_HOST}`, {
             withCredentials: true,
             transports: ['websocket']
         });
@@ -43,6 +43,7 @@ const Main: React.FC = () => {
         
         
         socket.on("connect", () => {
+          console.log("connected");
           socket.emit('game');
             // if(!me && game) {
             //   const found = game.players.find((p: any) => p.id === sessionId);
@@ -52,8 +53,8 @@ const Main: React.FC = () => {
         });
 
         socket.on("game", (game: any) => {
+          console.log('game',game)
           if (game) {
-            console.log('game',game)
               if (game.status === 'game_over') {
               setNotification({
                   visible: true,
